@@ -72,10 +72,8 @@ python3 -m http.server 8000
 1. **必须 HTTPS**：扫码链接是 `https://`，否则摄像头/麦克风无法使用。
 2. **建议用系统浏览器打开**：微信内置浏览器（尤其 iOS）对 `getUserMedia` 支持差。
    页面已在微信内给出提示，引导点右上角「在浏览器打开」。用 **Safari / Chrome** 最稳。
-3. **录音格式**：
-   - Safari 录 `m4a`（ASR 支持）✅
-   - Chrome 多为 `webm`（ASR 不支持）→ 会提示“请改用 Safari 打开”。
-   - 演示优先用 **iPhone Safari**。
+3. **录音格式**：录音由 Web Audio API 采集并编码为 **WAV（16kHz）**，
+   Chrome / Safari 均可用，ASR 接口直接支持，无需担心浏览器默认格式。
 4. **API Key 暴露**：纯前端 Key 写在 `config.js`，任何人可在浏览器开发者工具看到。
    - Gitee 仓库请设为**私有**，避免 Key 在公网仓库泄露；
    - Pages 页面本身的 JS 仍可被访问者看到 Key，这是纯前端固有限制，仅限 Demo；

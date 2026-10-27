@@ -300,8 +300,8 @@
     if (msg === 'NO_API_KEY') tip = '请在 js/config.js 填写 API Key';
     else if (msg.indexOf('超时') > -1) tip = '请求超时，请检查网络';
     else if (msg.indexOf('HTTP 401') > -1) tip = 'API Key 无效或已过期';
-    else if (msg.indexOf('audio format') > -1 || (audioFormat === 'webm'))
-      tip = '当前浏览器录音格式不被支持，请改用 Safari 打开';
+    else if (msg.indexOf('mime type') > -1 || msg.indexOf('audio format') > -1)
+      tip = '录音格式不被接口支持：' + msg;
     else if (msg.indexOf('HTTP') > -1) tip = '服务返回错误：' + msg;
     else if (msg.indexOf('Failed to fetch') > -1) tip = '网络或跨域错误';
     alert(title + '：' + tip);

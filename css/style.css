@@ -100,7 +100,7 @@ body {
 }
 
 .page.scene-mode .content {
-  display: none;
+  visibility: hidden; /* 保留 flex 占位，撑开空间，使底部栏位置不变 */
 }
 
 .avatar-wrap {
