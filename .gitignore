@@ -1,0 +1,6 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 注意：js/config.js 含 API Key，但 Gitee Pages 部署需要它，
+# 因此【不要】忽略 config.js。请改为将 Gitee 仓库设为「私有」以保护 Key。
